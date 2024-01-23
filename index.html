@@ -1,13 +1,21 @@
 <!DOCTYPE html>
-<html lang="en"class="scroll-smooth focus:scroll-auto">
+<html lang="en"class="scroll-smooth focus:scroll-auto " >
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Temanggung Coffe</title>
     <link rel="stylesheet" href="src/output.css">
+    <script>
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark')
+      } else {
+        document.documentElement.classList.remove('dark')
+      }
+      
+      </script>
     
 </head>
-<body>
+<body class="dark:bg-black">
     <!-- header -->
     <header class="absolute bg-white top-0 left-0 w-full z-10 flex items-center ">
         <div class="w-full ml-auto mr-auto px-[16px] py-[19px]">
@@ -34,13 +42,25 @@
                             <li class="group">
                                 <a href="#about" class="text-base py-2 mx-8 flex text-gray-800 transition group-hover:opacity-75">Contact</a>
                             </li>
+                            <li class="group flex items-center pl-8">
+                                <div class="flex ">
+                                    <span class="mr-2 text-sm text-slate-500">Light </span>
+                                    <input type="checkbox" id="dark-toggle" class="hidden">
+                                    <label for="dark-toggle">
+                                        <div class="flex h-5 w-9 rounded-full bg-slate-400 items-center p-1 cursor-pointer">
+                                            <div class="toggle-circle h-4 w-4 bg-white rounded-full"></div>
+                                        </div>
+                                    </label>
+                                    <span class="mr-2 text-sm text-slate-500">Dark </span>
+                                </div>
+                            </li>
                         </ul>
                     </nav>
                 </div>
             </div>
             
         </div>
-
+ 
     </header>
     <!-- header -->
     <!-- section  home start-->
@@ -67,8 +87,8 @@
     <!-- section picture start-->
     <section id="picture">
         <div class="max-w-[1240px] mx-auto py-6 px-16">
-            <h1 class="text-lg font-bold mb-3">ALL PRODUCT HERE 100% ORIGINAL FROM TEMANGGUNG</h1>
-            <P class="text-slate-600  mb-5">Kopi Temanggung merupakan salah satu komoditi di Kabupaten Temanggung, Jawa Tengah. Keberadaan Kopi Temanggung terdiri dari jenis robusta dan arabika. Kopi Temanggung merupakan salah satu kopi terbaik di dunia. Kopi tersebut telah diekspor di sejumlah negara. Kopi Arabika Temanggung pernah menjadi juara dalam festival kopi di Atlanta, Amerika Serikat, pada tahun 2016. Kopi Robusta Temanggung juga dalam festival kopi di Prancis.</P>
+            <h1 class="text-lg font-bold mb-3 dark:text-white">ALL PRODUCT HERE 100% ORIGINAL FROM TEMANGGUNG</h1>
+            <P class="text-slate-600 text-justify mb-5 dark:text-white">Kopi Temanggung merupakan salah satu komoditi di Kabupaten Temanggung, Jawa Tengah. Keberadaan Kopi Temanggung terdiri dari jenis robusta dan arabika. Kopi Temanggung merupakan salah satu kopi terbaik di dunia. Kopi tersebut telah diekspor di sejumlah negara. Kopi Arabika Temanggung pernah menjadi juara dalam festival kopi di Atlanta, Amerika Serikat, pada tahun 2016. Kopi Robusta Temanggung juga dalam festival kopi di Prancis.</P>
             <div class="grid grid-rows-none gap-2 mb-2 md:grid-cols-5 md:gap-4">
                 <img src="https://i.pinimg.com/564x/94/18/43/9418431141df3f3c367ff0f649659479.jpg" alt="/" class="w-full h-full object-cover col-span-2 md:col-span-3 row-span-2">
                 <img src="https://i.pinimg.com/474x/ff/a3/87/ffa387ff9eda4ef5e8f6dcccce4fd278.jpg" alt="/" class="w-full h-full object-cover " >
@@ -80,7 +100,7 @@
     </section>
     <!-- section picture end -->
     <!-- section coffe start-->
-    <section id="coffe" class=" bg-slate-100">
+    <section id="coffe" class="bg-slate-50 dark:bg-black" >
         <div class="w-full relative h-screen">
             <img src="src/img/simas-mo-1PcFcHBS9d0-unsplash.jpg" alt="background" class="w-full h-full absolute object-cover">
             
@@ -96,8 +116,8 @@
             <div class="grid grid-col-3 grid-flow-col gap-4">
                 <div class="row-span-3 mt-5 md:flex flex-row">
                     <div class=" md:px-4 mt-11">
-                        <h1 class="text-2xl font-bold text-center md:flex flex-col">KOPI TEMANGGUNG</h1>
-                        <p class="mt-2 ml-4 text-lg mb-4 md:px-8 " >Temanggung memiliki iklim yang baik untuk penanaman kopi single origin atau kopi yang ditanam di satu daerah tertentu. Dimana, wilayahnya memiliki curah hujan yang cukup dan iklim yang baik, sehingga daerah Temanggung mampu menghasilkan kopi yang baik.Perkebunan Kopi Temanggung memiliki luas lahan sekitar 14.500 hetare, yang terdiri dari 12.000 hektare kopi robusta dan sekitar 2.500 hingga 2.800 hektare adalah kopi arabika.</p>
+                        <h1 class="text-2xl font-bold text-center md:flex flex-col dark:text-white">KOPI TEMANGGUNG</h1>
+                        <p class="mt-2 ml-4 text-lg mb-4 md:px-8 dark:text-white " >Temanggung memiliki iklim yang baik untuk penanaman kopi single origin atau kopi yang ditanam di satu daerah tertentu. Dimana, wilayahnya memiliki curah hujan yang cukup dan iklim yang baik, sehingga daerah Temanggung mampu menghasilkan kopi yang baik.Perkebunan Kopi Temanggung memiliki luas lahan sekitar 14.500 hetare, yang terdiri dari 12.000 hektare kopi robusta dan sekitar 2.500 hingga 2.800 hektare adalah kopi arabika.</p>
                     </div>
                     <img src="https://i.pinimg.com/474x/dd/5a/7f/dd5a7f01a135aa6b0bdb4d4b218196cc.jpg" alt="" class="w-full h-3/2  justify-center  md:w-80 mr-6">
                 </div>  
@@ -105,19 +125,19 @@
         </div>
         <div class=" mx-auto py-6 px-16 mt-10">
             <div class="flex flex-wrap mt-4 mb-3">
-                <h1 class="text-3xl font-semibold ">KOPI ROBUSTA TEMANGGUNG</h1>
-                <p class="mt-3 text-justify">Kopi robusta Temanggung masih diolah secara konvensional dan belum mengikuti Standar Operasional Prosedur (SOP).Wilayah perkebunan kopi robusta terdapat di Kecamatan Pringsut, Kranggan, Kandangan, Jumo, Kaloran, Gemawang, Candiroto, Bejen, dan Wonoboyo.</p>
+                <h1 class="text-3xl font-semibold dark:text-white ">KOPI ROBUSTA TEMANGGUNG</h1>
+                <p class="mt-3 text-justify dark:text-white">Kopi robusta Temanggung masih diolah secara konvensional dan belum mengikuti Standar Operasional Prosedur (SOP).Wilayah perkebunan kopi robusta terdapat di Kecamatan Pringsut, Kranggan, Kandangan, Jumo, Kaloran, Gemawang, Candiroto, Bejen, dan Wonoboyo.</p>
             </div>
             <div class="flex flex-wrap">
-                <h1 class="text-3xl font-semibold ">KOPI ARABIKA TEMANGGUNG</h1>
-                <p class="mt-3 text-justify">Kopi Arabika Temanggung hampir semua berkualitas premium. Hal tersebut karena, kopi Arabika tumbuh di dataran tinggi dengan ketinggian sekitar 1.300 meter di atas permukaan laut (mdpl). Dataran tinggi di wilayah Temanggung diampit oleh Gunung Sindoro dan Gunung Sumbing yang banyak ditanami kopi arabika sebagai komoditi kopi spesial dari Temanggung.</p>
+                <h1 class="text-3xl font-semibold dark:text-white ">KOPI ARABIKA TEMANGGUNG</h1>
+                <p class="mt-3 text-justify dark:text-white ">Kopi Arabika Temanggung hampir semua berkualitas premium. Hal tersebut karena, kopi Arabika tumbuh di dataran tinggi dengan ketinggian sekitar 1.300 meter di atas permukaan laut (mdpl). Dataran tinggi di wilayah Temanggung diampit oleh Gunung Sindoro dan Gunung Sumbing yang banyak ditanami kopi arabika sebagai komoditi kopi spesial dari Temanggung.</p>
             </div>
             <div class="">
                 
                 <section>
                     <div class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
                       <header>
-                        <h2 class="text-2xl font-bold text-gray-900 sm:text-3xl">Coffe Colections</h2>
+                        <h2 class="text-2xl font-bold text-gray-900 sm:text-3xl dark:text-white">Coffe Product</h2>
                       </header>
                   
                       <ul class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -240,8 +260,8 @@
         <div class="max-w-[1240px] mx-auto py-6 px-16">
             <div class="flex flex-wrap">
                 <div class="w-full px-4 mb-3 lg:w-1/2">
-                    <h1 class="font-bold text-xl mb-2">About Us</h1>
-                    <h3 class="font-semibold text-2xl uppercase mb-2">Temanggung Coffe</h3>
+                    <h1 class="font-bold text-xl mb-2 dark:text-white">About Us</h1>
+                    <h3 class="font-semibold text-2xl uppercase mb-2 dark:text-white">Temanggung Coffe</h3>
                     <p>Kopi khas buatan Temanggung</p>
                 </div>
                 <!-- <div class="w-full px-4 mb-3 lg:w-1/2 lg:pt-10">
@@ -260,10 +280,10 @@
         </div>
     </section>
     <section id="footer">
-        <footer class="bg-white">
+        <footer >
             <div class="mx-auto max-w-screen-xl px-4 pb-8 pt-16 sm:px-6 lg:px-8 lg:pt-24">
               <div class="text-center">
-                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-5xl">Customise Your Product</h2>
+                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-5xl dark:text-gray-500">Customise Your Product</h2>
           
                 <p class="mx-auto mt-4 max-w-sm text-gray-500">
                   ALL PRODUCT HERE 100% ORIGINAL FROM TEMANGGUNG
@@ -271,7 +291,7 @@
           
                 <a
                   href="#home"
-                  class="mt-8 inline-block rounded-full border border-black px-12 py-3 text-sm font-medium text-gray-500 hover:bg-black hover:text-white focus:outline-none focus:ring active:bg-indigo-500"
+                  class="mt-8 inline-block rounded-full border dark:border-white border-black px-12 py-3 text-sm font-medium text-gray-500 hover:bg-black hover:text-white focus:outline-none focus:ring active:bg-indigo-500"
                 >
                   Get Started
                 </a>
@@ -344,6 +364,11 @@
           </footer>
     </section>
     <!-- section social media end -->
+    <!-- back to top -->
+    <a href="#home" class="fixed bottom-4 right-4 z-[9999] h-10 w-10 bg-slate-200 rounded-full hidden animate-bounce " id="to-top">
+        <span class="flex justify-center items-center mt-2 "><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="fill-current" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="m6.293 11.293 1.414 1.414L12 8.414l4.293 4.293 1.414-1.414L12 5.586z"></path><path d="m6.293 16.293 1.414 1.414L12 13.414l4.293 4.293 1.414-1.414L12 10.586z"></path></svg></span>
+    </a>
+    <!-- back to top -->
 <script src="src/js/js.js"></script>
 </body>
 </html>
